@@ -1,0 +1,7 @@
+name: shellcheck
+description: run shellcheck over your files
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: find . -type f -name '*.sh' -exec shellcheck {} +
